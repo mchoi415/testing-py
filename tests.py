@@ -37,6 +37,7 @@ class PartyTests(unittest.TestCase):
                                   follow_redirects=True)
 
         # FIXME: check that once we log in we see party details--but not the form!
+        self.asserIn(b"", result.data)
         self.assertIn(b"Party Details", result.data)
         print("FIXME")
 
